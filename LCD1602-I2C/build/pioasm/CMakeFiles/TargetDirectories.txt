@@ -1,0 +1,3 @@
+/home/davidl09/pico/projects/lcd1602/build/pioasm/CMakeFiles/pioasm.dir
+/home/davidl09/pico/projects/lcd1602/build/pioasm/CMakeFiles/edit_cache.dir
+/home/davidl09/pico/projects/lcd1602/build/pioasm/CMakeFiles/rebuild_cache.dir

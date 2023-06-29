@@ -1,0 +1,13 @@
+# Target labels
+ ELF2UF2Build
+# Source files and their labels
+/home/davidl09/pico/projects/lcd1602/build/CMakeFiles/ELF2UF2Build
+/home/davidl09/pico/projects/lcd1602/build/CMakeFiles/ELF2UF2Build.rule
+/home/davidl09/pico/projects/lcd1602/build/CMakeFiles/ELF2UF2Build-complete.rule
+/home/davidl09/pico/projects/lcd1602/build/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-build.rule
+/home/davidl09/pico/projects/lcd1602/build/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-configure.rule
+/home/davidl09/pico/projects/lcd1602/build/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-download.rule
+/home/davidl09/pico/projects/lcd1602/build/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-install.rule
+/home/davidl09/pico/projects/lcd1602/build/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-mkdir.rule
+/home/davidl09/pico/projects/lcd1602/build/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-patch.rule
+/home/davidl09/pico/projects/lcd1602/build/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-update.rule
