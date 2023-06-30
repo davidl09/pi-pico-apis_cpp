@@ -1,5 +1,5 @@
 
-/home/davidl09/pico/projects/lcd1602/build/lcd1602.elf:     file format elf32-littlearm
+/home/davidl09/pico/pico-apis-cpp/LCD1602-I2C/build/lcd1602.elf:     file format elf32-littlearm
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
@@ -46,7 +46,7 @@ Idx Name          Size      VMA       LMA       File off  Algn
  20 .debug_frame  00000028  00000000  00000000  00004a8c  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
-/home/davidl09/pico/projects/lcd1602/build/lcd1602.elf:     file format elf32-littlearm
+/home/davidl09/pico/pico-apis-cpp/LCD1602-I2C/build/lcd1602.elf:     file format elf32-littlearm
 
 
 Disassembly of section .boot2:

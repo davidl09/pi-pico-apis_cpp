@@ -1,4 +1,4 @@
-// Padded and checksummed version of: /home/davidl09/pico/projects/lcd1602/build/pico-sdk/src/rp2_common/boot_stage2/bs2_default.bin
+// Padded and checksummed version of: /home/davidl09/pico/pico-apis-cpp/LCD1602-I2C/build/pico-sdk/src/rp2_common/boot_stage2/bs2_default.bin
 
 .cpu cortex-m0plus
 .thumb

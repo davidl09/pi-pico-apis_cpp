@@ -8,17 +8,17 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_ASM
-  "/home/davidl09/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S" "/home/davidl09/pico/projects/lcd1602/build/CMakeFiles/lcd1602.dir/home/davidl09/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj"
-  "/home/davidl09/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S" "/home/davidl09/pico/projects/lcd1602/build/CMakeFiles/lcd1602.dir/home/davidl09/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj"
-  "/home/davidl09/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S" "/home/davidl09/pico/projects/lcd1602/build/CMakeFiles/lcd1602.dir/home/davidl09/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj"
-  "/home/davidl09/pico/pico-sdk/src/rp2_common/pico_divider/divider.S" "/home/davidl09/pico/projects/lcd1602/build/CMakeFiles/lcd1602.dir/home/davidl09/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj"
-  "/home/davidl09/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S" "/home/davidl09/pico/projects/lcd1602/build/CMakeFiles/lcd1602.dir/home/davidl09/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj"
-  "/home/davidl09/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S" "/home/davidl09/pico/projects/lcd1602/build/CMakeFiles/lcd1602.dir/home/davidl09/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj"
-  "/home/davidl09/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S" "/home/davidl09/pico/projects/lcd1602/build/CMakeFiles/lcd1602.dir/home/davidl09/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj"
-  "/home/davidl09/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S" "/home/davidl09/pico/projects/lcd1602/build/CMakeFiles/lcd1602.dir/home/davidl09/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj"
-  "/home/davidl09/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S" "/home/davidl09/pico/projects/lcd1602/build/CMakeFiles/lcd1602.dir/home/davidl09/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj"
-  "/home/davidl09/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S" "/home/davidl09/pico/projects/lcd1602/build/CMakeFiles/lcd1602.dir/home/davidl09/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj"
-  "/home/davidl09/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S" "/home/davidl09/pico/projects/lcd1602/build/CMakeFiles/lcd1602.dir/home/davidl09/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj"
+  "/home/davidl09/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S" "/home/davidl09/pico/pico-apis-cpp/LCD1602-I2C/build/CMakeFiles/lcd1602.dir/home/davidl09/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj"
+  "/home/davidl09/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S" "/home/davidl09/pico/pico-apis-cpp/LCD1602-I2C/build/CMakeFiles/lcd1602.dir/home/davidl09/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj"
+  "/home/davidl09/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S" "/home/davidl09/pico/pico-apis-cpp/LCD1602-I2C/build/CMakeFiles/lcd1602.dir/home/davidl09/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj"
+  "/home/davidl09/pico/pico-sdk/src/rp2_common/pico_divider/divider.S" "/home/davidl09/pico/pico-apis-cpp/LCD1602-I2C/build/CMakeFiles/lcd1602.dir/home/davidl09/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj"
+  "/home/davidl09/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S" "/home/davidl09/pico/pico-apis-cpp/LCD1602-I2C/build/CMakeFiles/lcd1602.dir/home/davidl09/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj"
+  "/home/davidl09/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S" "/home/davidl09/pico/pico-apis-cpp/LCD1602-I2C/build/CMakeFiles/lcd1602.dir/home/davidl09/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj"
+  "/home/davidl09/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S" "/home/davidl09/pico/pico-apis-cpp/LCD1602-I2C/build/CMakeFiles/lcd1602.dir/home/davidl09/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj"
+  "/home/davidl09/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S" "/home/davidl09/pico/pico-apis-cpp/LCD1602-I2C/build/CMakeFiles/lcd1602.dir/home/davidl09/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj"
+  "/home/davidl09/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S" "/home/davidl09/pico/pico-apis-cpp/LCD1602-I2C/build/CMakeFiles/lcd1602.dir/home/davidl09/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj"
+  "/home/davidl09/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S" "/home/davidl09/pico/pico-apis-cpp/LCD1602-I2C/build/CMakeFiles/lcd1602.dir/home/davidl09/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj"
+  "/home/davidl09/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S" "/home/davidl09/pico/pico-apis-cpp/LCD1602-I2C/build/CMakeFiles/lcd1602.dir/home/davidl09/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj"
   )
 set(CMAKE_ASM_COMPILER_ID "GNU")
 
@@ -57,7 +57,7 @@ set(CMAKE_TARGET_DEFINITIONS_ASM
   "LIB_PICO_UTIL=1"
   "PICO_BOARD=\"pico\""
   "PICO_BUILD=1"
-  "PICO_CMAKE_BUILD_TYPE=\"Debug\""
+  "PICO_CMAKE_BUILD_TYPE=\"Release\""
   "PICO_COPY_TO_RAM=0"
   "PICO_CXX_ENABLE_EXCEPTIONS=0"
   "PICO_NO_FLASH=0"
@@ -178,7 +178,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/davidl09/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c" "CMakeFiles/lcd1602.dir/home/davidl09/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj" "gcc" "CMakeFiles/lcd1602.dir/home/davidl09/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj.d"
   "/home/davidl09/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c" "CMakeFiles/lcd1602.dir/home/davidl09/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj" "gcc" "CMakeFiles/lcd1602.dir/home/davidl09/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj.d"
   "/home/davidl09/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp" "CMakeFiles/lcd1602.dir/home/davidl09/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj" "gcc" "CMakeFiles/lcd1602.dir/home/davidl09/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj.d"
-  "/home/davidl09/pico/projects/lcd1602/test.cpp" "CMakeFiles/lcd1602.dir/test.cpp.obj" "gcc" "CMakeFiles/lcd1602.dir/test.cpp.obj.d"
+  "/home/davidl09/pico/pico-apis-cpp/LCD1602-I2C/test.cpp" "CMakeFiles/lcd1602.dir/test.cpp.obj" "gcc" "CMakeFiles/lcd1602.dir/test.cpp.obj.d"
   )
 
 # Targets to which this target links.

@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/davidl09/pico/projects/lcd1602
+CMAKE_SOURCE_DIR = /home/davidl09/pico/pico-apis-cpp/LCD1602-I2C
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/davidl09/pico/projects/lcd1602/build
+CMAKE_BINARY_DIR = /home/davidl09/pico/pico-apis-cpp/LCD1602-I2C/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/davidl09/pico/projects/lcd1602/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/davidl09/pico/projects/lcd1602/build/CMakeFiles /home/davidl09/pico/projects/lcd1602/build/pico-sdk/src/rp2_common/hardware_exception//CMakeFiles/progress.marks
-	cd /home/davidl09/pico/projects/lcd1602/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/rp2_common/hardware_exception/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/davidl09/pico/projects/lcd1602/build/CMakeFiles 0
+	cd /home/davidl09/pico/pico-apis-cpp/LCD1602-I2C/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/davidl09/pico/pico-apis-cpp/LCD1602-I2C/build/CMakeFiles /home/davidl09/pico/pico-apis-cpp/LCD1602-I2C/build/pico-sdk/src/rp2_common/hardware_exception//CMakeFiles/progress.marks
+	cd /home/davidl09/pico/pico-apis-cpp/LCD1602-I2C/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/rp2_common/hardware_exception/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/davidl09/pico/pico-apis-cpp/LCD1602-I2C/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/davidl09/pico/projects/lcd1602/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/rp2_common/hardware_exception/clean
+	cd /home/davidl09/pico/pico-apis-cpp/LCD1602-I2C/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/rp2_common/hardware_exception/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,17 +103,17 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/davidl09/pico/projects/lcd1602/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/rp2_common/hardware_exception/preinstall
+	cd /home/davidl09/pico/pico-apis-cpp/LCD1602-I2C/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/rp2_common/hardware_exception/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/davidl09/pico/projects/lcd1602/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/rp2_common/hardware_exception/preinstall
+	cd /home/davidl09/pico/pico-apis-cpp/LCD1602-I2C/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/rp2_common/hardware_exception/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/davidl09/pico/projects/lcd1602/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/davidl09/pico/pico-apis-cpp/LCD1602-I2C/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Help Target
@@ -135,6 +135,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/davidl09/pico/projects/lcd1602/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/davidl09/pico/pico-apis-cpp/LCD1602-I2C/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
