@@ -12,4 +12,3 @@ pico_enable_stdio_usb(lcd1602 1)
 pico_enable_stdio_uart(lcd1602 0)
 pico_add_extra_outputs(lcd1602)
 target_link_libraries(lcd1602 pico_stdlib hardware_i2c)
-

@@ -2,10 +2,7 @@
 *.d
 
 .vscode/
-**/build/
-*/*/build/
 build/
-
 
 # Compiled Object files
 *.slo
