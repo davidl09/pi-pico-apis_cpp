@@ -3,6 +3,8 @@ include(pico_sdk_import.cmake)
 
 project(lcd1602 C CXX ASM)
 
+include_directories(~/pico/pico-apis-cpp)
+
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 17)
 

@@ -3,20 +3,24 @@
 
 #include <cstdio>
 #include <cstdlib>
+#include <string>
+#include <vector>
+#include <cstring>
 
 #include "pico.h"
-#include "lcd1602.hpp"
 #include "pico/stdlib.h"
+#include "pico/time.h"
 #include "hardware/i2c.h"
+
+#include "I2CMaster/I2C.hpp"
 
 enum lcd_mode{
     command = 0,
-    byte
+    character
 };
 
-class LCD1602_I2C{
+class LCD1602_I2C : public I2CMaster{
     private:
-        const int bus_addr;
         const static int maxlines = 2;
         const static int maxchars = 16;
 
@@ -53,16 +57,87 @@ class LCD1602_I2C{
 
         static const int LCD_ENABLE_BIT = 0x04;
 
-        i2c_inst_t i2c;
+        void toggle_enable(uint8_t val) {
+            // Toggle enable pin on LCD display
+            // We cannot do this too quickly or things don't work
+        #define DELAY_US 600
+            sleep_us(DELAY_US);
+            this->write_byte(val | LCD_ENABLE_BIT);
+            sleep_us(DELAY_US);
+            this->write_byte(val & ~LCD_ENABLE_BIT);
+            sleep_us(DELAY_US);
+        }
+
+        // The display is sent a byte as two separate nibble transfers
+        void send_byte(uint8_t val, int mode) {
+            uint8_t high = mode | (val & 0xF0) | LCD_BACKLIGHT;
+            uint8_t low = mode | ((val << 4) & 0xF0) | LCD_BACKLIGHT;
+
+            this->write_byte(high);
+            toggle_enable(high);
+            this->write_byte(low);
+            toggle_enable(low);
+        }
+
+        void clear() {
+            send_byte(LCD_CLEARDISPLAY, command);
+        }
 
     public:
-        LCD1602_I2C() : bus_addr(0x27){
-            
+        LCD1602_I2C(int addr, int sda = PICO_DEFAULT_I2C_SDA_PIN, int scl = PICO_DEFAULT_I2C_SCL_PIN)
+        : I2CMaster(addr, sda, scl){
+            send_byte(0x03, command);
+            send_byte(0x03, command);
+            send_byte(0x03, command);
+            send_byte(0x02, command);
+
+            send_byte(LCD_ENTRYMODESET | LCD_ENTRYLEFT, command);
+            send_byte(LCD_FUNCTIONSET | LCD_2LINE, command);
+            send_byte(LCD_DISPLAYCONTROL | LCD_DISPLAYON, command);
+            clear();
         }
 
-        LCD1602_I2C(const int address) : bus_addr(address){
-
+        void set_cursor(int& line, int& position) {
+            int val = (line == 0) ? 0x80 + position : 0xC0 + position;
+            send_byte(val, command);
         }
+
+        void set_cursor(int line, int position) {
+            int val = (line == 0) ? 0x80 + position : 0xC0 + position;
+            send_byte(val, command);
+        }
+
+        void send_char(char val) {
+            send_byte(val, character);
+        }
+
+        void send_char(char& val){
+            send_byte(val, character);
+        }
+
+        void send_string(const char *s) {
+            while (*s) {
+                send_char(*s++);
+            }
+        }
+
+        void send_string(const std::string& s){
+            for(auto& c : s){
+                send_char(c);
+            }
+        }
+
+        void display_scroll_messages(std::vector<std::string>& messages, int delay_ms){
+            for(int i = 0; i < messages.size(); i += maxlines){
+                for(int line = 0; line < maxlines; i++){
+                    set_cursor(line, (maxchars/2) - messages[i + line].size()/2);
+                    send_string(messages[i + line]);
+                }
+                sleep_ms(2000);
+                clear();
+            }
+        }
+
 };
 
 #endif
