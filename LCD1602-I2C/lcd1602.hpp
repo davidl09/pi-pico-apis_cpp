@@ -57,15 +57,16 @@ class LCD1602_I2C : public I2CMaster{
 
         static const int LCD_ENABLE_BIT = 0x04;
 
-        void toggle_enable(uint8_t val) {
+        void toggle_enable(uint8_t val, int mode) {
             // Toggle enable pin on LCD display
             // We cannot do this too quickly or things don't work
-        #define DELAY_US 600
-            sleep_us(DELAY_US);
+            assert(mode == 0 || mode == 1);
+            const int delay = (mode == character ? 0 : 600); //no delay needed if sending characters? check this later
+            sleep_us(delay);
             this->write_byte(val | LCD_ENABLE_BIT);
-            sleep_us(DELAY_US);
+            sleep_us(delay);
             this->write_byte(val & ~LCD_ENABLE_BIT);
-            sleep_us(DELAY_US);
+            sleep_us(delay);
         }
 
         // The display is sent a byte as two separate nibble transfers
@@ -74,9 +75,9 @@ class LCD1602_I2C : public I2CMaster{
             uint8_t low = mode | ((val << 4) & 0xF0) | LCD_BACKLIGHT;
 
             this->write_byte(high);
-            toggle_enable(high);
+            toggle_enable(high, mode);
             this->write_byte(low);
-            toggle_enable(low);
+            toggle_enable(low, mode);
         }
 
         void clear() {
@@ -84,7 +85,7 @@ class LCD1602_I2C : public I2CMaster{
         }
 
     public:
-        LCD1602_I2C(int addr, int sda = PICO_DEFAULT_I2C_SDA_PIN, int scl = PICO_DEFAULT_I2C_SCL_PIN)
+        LCD1602_I2C(const int addr, const int sda = PICO_DEFAULT_I2C_SDA_PIN, const int scl = PICO_DEFAULT_I2C_SCL_PIN)
         : I2CMaster(addr, sda, scl){
             send_byte(0x03, command);
             send_byte(0x03, command);
@@ -107,6 +108,14 @@ class LCD1602_I2C : public I2CMaster{
             send_byte(val, command);
         }
 
+        void cursor_blink(bool state){
+            send_byte((state ? LCD_BLINKON : 0) | LCD_DISPLAYCONTROL, command);
+        }
+
+        void cursor_toggle(bool state){
+            send_byte((state ? LCD_CURSORON : 0) | LCD_DISPLAYCONTROL, command);
+        }
+
         void send_char(char val) {
             send_byte(val, character);
         }
@@ -121,7 +130,7 @@ class LCD1602_I2C : public I2CMaster{
             }
         }
 
-        void send_string(const std::string& s){
+        void send_string(const std::string s){
             for(auto& c : s){
                 send_char(c);
             }

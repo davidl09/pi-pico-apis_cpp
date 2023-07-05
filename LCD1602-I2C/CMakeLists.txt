@@ -5,6 +5,8 @@ project(lcd1602 C CXX ASM)
 
 include_directories(~/pico/pico-apis-cpp)
 
+add_compile_options(-O3)
+
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 17)
 
