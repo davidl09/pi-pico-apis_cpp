@@ -6,6 +6,6 @@ class MPU6050{
         const int addr;
     public:
         MPU6050(const int busaddr) : addr(busaddr){
-
+            
         }
 };
