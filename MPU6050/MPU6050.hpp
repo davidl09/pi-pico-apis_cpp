@@ -1,3 +1,6 @@
+#ifndef MPU6050_HPP
+#define MPU6050_HPP
+
 #include "pico.h"
 #include "hardware/i2c.h"
 
@@ -47,3 +50,5 @@ class MPU6050{
             retval.temp = buffer[0] << 8 | buffer[1];
         }
 };
+
+#endif
