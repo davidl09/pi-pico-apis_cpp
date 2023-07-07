@@ -20,7 +20,7 @@ enum lcd_mode{
 };
 
 class LCD1602_I2C : public I2CMaster{
-    private:
+    protected:
         const static int maxlines = 2;
         const static int maxchars = 16;
 
@@ -80,6 +80,10 @@ class LCD1602_I2C : public I2CMaster{
             toggle_enable(low, mode);
         }
 
+        void send_byte_8bit(uint8_t val, lcd_mode mode){
+
+        }
+
         void clear() {
             send_byte(LCD_CLEARDISPLAY, command);
         }
@@ -98,6 +102,11 @@ class LCD1602_I2C : public I2CMaster{
             clear();
         }
 
+        void display_clear(){
+            clear();
+            set_cursor(0, 0);
+        }
+
         void set_cursor(int& line, int& position) {
             int val = (line == 0) ? 0x80 + position : 0xC0 + position;
             send_byte(val, command);
@@ -108,12 +117,20 @@ class LCD1602_I2C : public I2CMaster{
             send_byte(val, command);
         }
 
-        void cursor_blink(bool state){
-            send_byte((state ? LCD_BLINKON : 0) | LCD_DISPLAYCONTROL, command);
+        void cursor_blink(bool state){//broken
+            //send_byte(, command);
         }
 
-        void cursor_toggle(bool state){
+        void cursor_toggle(bool state){ //broken
             send_byte((state ? LCD_CURSORON : 0) | LCD_DISPLAYCONTROL, command);
+        }
+
+        void cursor_home(){
+            send_byte(LCD_RETURNHOME, command);
+        }
+
+        void backlight(bool state){ //broken
+            write_byte(LCD_DISPLAYCONTROL | LCD_BACKLIGHT);
         }
 
         void send_char(char val) {
