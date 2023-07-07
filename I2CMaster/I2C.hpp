@@ -14,7 +14,7 @@ class I2CMaster{
         const int bus_addr;
 
     public:
-        I2CMaster(int addr, int sda = PICO_DEFAULT_I2C_SDA_PIN, int scl = PICO_DEFAULT_I2C_SCL_PIN) : bus_addr(addr){
+        I2CMaster(int addr, int rate = 100 * 1000, int sda = PICO_DEFAULT_I2C_SDA_PIN, int scl = PICO_DEFAULT_I2C_SCL_PIN) : bus_addr(addr){
             i2c = (PICO_DEFAULT_I2C_INSTANCE);
             i2c_init(i2c, 100 * 1000);
             gpio_set_function(sda, GPIO_FUNC_I2C);

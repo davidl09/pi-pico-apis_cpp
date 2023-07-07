@@ -4,7 +4,7 @@ include(pico_sdk_import.cmake)
 
 project(MPU6050 C CXX ASM)
 
-include_directories(../)
+include_directories(~/pico/pico-apis-cpp)
 
 pico_sdk_init()
 
